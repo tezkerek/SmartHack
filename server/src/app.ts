@@ -10,7 +10,7 @@ mongoose.connect(MONGO)
 
 const app = express()
 app.use(express.json())
-app.use(express.static(__dirname+'/build'))
+
 const userSchema = new mongoose.Schema({
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
